@@ -146,17 +146,17 @@
                                             <div class="text-center"></div>
                                         </td>
                                         <td class="ctr">
-                                            <textarea class="form-control swal2-textarea textarea-rapot" cols="50" rows="5" disabled></textarea>
+                                            <textarea class="form-control swal2-textarea textarea-rapot" cols="50" rows="5"></textarea>
                                         </td>
                                         <td class="ctr">
                                             <input type="text" name="nilai" maxlength="2" onkeypress="return inputAngka(event)" class="form-control text-center nilai_{{$data->id}}" data-ids="{{$data->id}}" autofocus autocomplete="off">
                                             <div class="knilai_{{$data->id}} text-center"></div>
                                         </td>
                                         <td class="ctr">
-                                            <input type="text" name="predikat" class="form-control text-center" disabled>
+                                            <input type="text" name="predikat" class="form-control text-center" >
                                         </td>
                                         <td class="ctr">
-                                            <textarea class="form-control swal2-textarea textarea-rapot" cols="50" rows="5" disabled></textarea>
+                                            <textarea class="form-control swal2-textarea textarea-rapot" cols="50" rows="5" ></textarea>
                                         </td>
                                         <td class="ctr">
                                             <i class="fas fa-exclamation-triangle" style="font-weight:bold;"></i>

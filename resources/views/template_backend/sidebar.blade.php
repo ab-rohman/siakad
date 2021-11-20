@@ -83,7 +83,7 @@
                         </ul>
                     </li>
                     @if (Auth::user()->role == "Admin")
-                        <li class="nav-item has-treeview" id="liViewTrash">
+                        {{--  <li class="nav-item has-treeview" id="liViewTrash">
                             <a href="#" class="nav-link" id="ViewTrash">
                                 <i class="nav-icon fas fa-recycle"></i>
                                 <p>
@@ -129,15 +129,15 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>  --}}
                     @else
                     @endif
-                    <li class="nav-item">
+                    {{--  <li class="nav-item">
                         <a href="{{ route('guru.absensi') }}" class="nav-link" id="AbsensiGuru">
                             <i class="fas fa-calendar-check nav-icon"></i>
                             <p>Absensi Guru</p>
                         </a>
-                    </li>
+                    </li>  --}}
                     <li class="nav-item has-treeview" id="liNilai">
                         <a href="#" class="nav-link" id="Nilai">
                             <i class="nav-icon fas fa-file-signature"></i>
@@ -153,12 +153,12 @@
                                     <p>Nilai Ulangan</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            {{--  <li class="nav-item">
                                 <a href="{{ route('sikap-kelas') }}" class="nav-link" id="Sikap">
                                     <i class="fas fa-file-alt nav-icon"></i>
                                     <p>Nilai Sikap</p>
                                 </a>
-                            </li>
+                            </li>  --}}
                             <li class="nav-item">
                                 <a href="{{ route('rapot-kelas') }}" class="nav-link" id="Rapot">
                                     <i class="fas fa-file-alt nav-icon"></i>
@@ -186,12 +186,12 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{--  <li class="nav-item">
                         <a href="{{ route('absen.harian') }}" class="nav-link" id="AbsenGuru">
                             <i class="fas fa-calendar-check nav-icon"></i>
                             <p>Absen</p>
                         </a>
-                    </li>
+                    </li>  --}}
                     <li class="nav-item">
                         <a href="{{ route('jadwal.guru') }}" class="nav-link" id="JadwalGuru">
                             <i class="fas fa-calendar-alt nav-icon"></i>
@@ -258,12 +258,12 @@
                             <p>Ulangan</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{--  <li class="nav-item">
                         <a href="{{ route('sikap.siswa') }}" class="nav-link" id="SikapSiswa">
                             <i class="fas fa-file-alt nav-icon"></i>
                             <p>Sikap</p>
                         </a>
-                    </li>
+                    </li>  --}}
                     <li class="nav-item">
                         <a href="{{ route('rapot.siswa') }}" class="nav-link" id="RapotSiswa">
                             <i class="fas fa-file-alt nav-icon"></i>

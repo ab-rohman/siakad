@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-5">
             <!-- Profile Image -->
-            <div class="card card-primary card-outline">
+            <div class="card card-teal card-outline">
                 <div class="card-body box-profile">
                     <div class="text-center">
                     @if (Auth::user()->role == 'Guru')
@@ -45,13 +45,13 @@
                         </ul>
                     @else
                     @endif
-                    <a href="{{ route('pengaturan.profile') }}" class="btn btn-primary btn-block"><b>Edit Profile</b></a>
+                    <a href="{{ route('pengaturan.profile') }}" class="btn btn-teal btn-block"><b>Edit Profile</b></a>
                 </div>
                 <!-- /.card-body -->
             </div>
             <!-- /.card -->
 
-            <div class="card card-primary card-outline">
+            <div class="card card-teal card-outline">
                 <div class="card-header">
                     <h3 class="card-title">Pengaturan Akun</h3>
                 </div>
@@ -75,7 +75,7 @@
         
         <div class="col-7">
             <!-- About Me Box -->
-            <div class="card card-primary">
+            <div class="card card-teal">
                 <div class="card-header">
                     <h3 class="card-title">About Me</h3>
                 </div>
@@ -86,7 +86,7 @@
                     <hr>
 
                     @if (Auth::user()->role == 'Guru')
-                        <strong><i class="fas fa-book mr-1"></i> Guru Mapel</strong>
+                        <strong><i class="fas fa-book mr-1"></i> Ustadz Mapel</strong>
                         <p class="text-muted">{{ Auth::user()->guru(Auth::user()->id_card)->mapel->nama_mapel }}</p>
                         <hr>
                         <strong><i class="far fa-file-alt mr-1"></i> Kode Jadwal</strong>

@@ -6,7 +6,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title">Entry Nilai Ulangan</h3>
       </div>
@@ -26,7 +26,7 @@
                         <td>{{ $kelas->guru->nama_guru }}</td>
                     </tr>
                     <tr>
-                        <td>Jumlah Siswa</td>
+                        <td>Jumlah Santri</td>
                         <td>:</td>
                         <td>{{ $siswa->count() }}</td>
                     </tr>
@@ -36,7 +36,7 @@
                         <td>{{ $guru->mapel->nama_mapel }}</td>
                     </tr>
                     <tr>
-                        <td>Guru Mata Pelajaran</td>
+                        <td>Ustadz Mata Pelajaran</td>
                         <td>:</td>
                         <td>{{ $guru->nama_guru }}</td>
                     </tr>
@@ -74,7 +74,7 @@
                     <thead>
                         <tr>
                             <th class="ctr">No.</th>
-                            <th>Nama Siswa</th>
+                            <th>Nama Santri</th>
                             <th class="ctr">ULHA 1</th>
                             <th class="ctr">ULHA 2</th>
                             <th class="ctr">UTS</th>
@@ -190,7 +190,7 @@
                     uas : uas,
                 },
                 success: function(data){
-                    toastr.success("Nilai ulangan siswa berhasil ditambahkan!");
+                    toastr.success("Nilai ulangan Santri berhasil ditambahkan!");
                     location.reload();
                 },
                 error: function (data) {

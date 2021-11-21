@@ -9,7 +9,7 @@
             <form class="form-group" action="{{ route('admin.pengumuman.simpan') }}" method="post">
                 @csrf
                 <div class="card-header">
-                    <button type="submit" name="submit" class="btn btn-outline-primary">
+                    <button type="submit" name="submit" class="btn btn-outline-teal">
                         Simpan &nbsp; <i class="nav-icon fas fa-save"></i>
                     </button>
                     <div class="card-tools">

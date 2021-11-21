@@ -34,8 +34,8 @@
                         <form action="{{ route('kelas.destroy', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <button type="button" class="btn btn-info btn-sm" onclick="getSubsSiswa({{$data->id}})" data-toggle="modal" data-target=".view-siswa">
-                              <i class="nav-icon fas fa-users"></i> &nbsp; View Siswa
+                            <button type="button" class="btn btn-primary btn-sm" onclick="getSubsSiswa({{$data->id}})" data-toggle="modal" data-target=".view-siswa">
+                              <i class="nav-icon fas fa-users"></i> &nbsp; View Santri
                             </button>
                             <button type="button" class="btn btn-info btn-sm" onclick="getSubsJadwal({{$data->id}})" data-toggle="modal" data-target=".view-jadwal">
                               <i class="nav-icon fas fa-calendar-alt"></i> &nbsp; View Jadwal
@@ -89,7 +89,7 @@
         </div>
         <div class="modal-footer justify-content-between">
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-            <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+            <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
       </form>
       </div>
     </div>
@@ -101,7 +101,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="judul-siswa">View Siswa</h4>
+        <h4 class="modal-title" id="judul-siswa">View Santri</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -113,20 +113,20 @@
               <table class="table table-bordered table-striped table-hover" width="100%">
                 <thead>
                   <tr>
-                    <th>No Induk Siswa</th>
-                    <th>Nama Siswa</th>
+                    <th>No Induk Santri</th>
+                    <th>Nama Santri</th>
                     <th>L/P</th>
-                    <th>Foto Siswa</th>
+                    <th>Foto Santri</th>
                   </tr>
                 </thead>
                 <tbody id="data-siswa">
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>No Induk Siswa</th>
-                    <th>Nama Siswa</th>
+                    <th>No Induk Santri</th>
+                    <th>Nama Santri</th>
                     <th>L/P</th>
-                    <th>Foto Siswa</th>
+                    <th>Foto Santri</th>
                   </tr>
                 </tfoot>
               </table>
@@ -136,7 +136,7 @@
         </div>
         <div class="modal-footer justify-content-between">
           <button type="button" class="btn btn-default" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
-          <a id="link-siswa" href="#" class="btn btn-primary"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
+          <a id="link-siswa" href="#" class="btn btn-teal"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
         </div>
       </div>
     </div>
@@ -183,7 +183,7 @@
       </div>
       <div class="modal-footer justify-content-between">
         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
-        <a id="link-jadwal" href="#" class="btn btn-primary"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
+        <a id="link-jadwal" href="#" class="btn btn-teal"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
       </div>
     </div>
   </div>
@@ -258,7 +258,7 @@
           var siswa = "";
           if(result){
             $.each(result,function(index, val){
-              $("#judul-siswa").text('View Data Siswa ' + val.kelas);
+              $("#judul-siswa").text('View Data Santri ' + val.kelas);
               siswa += "<tr>";
                 siswa += "<td>"+val.no_induk+"</td>";
                 siswa += "<td>"+val.nama_siswa+"</td>";

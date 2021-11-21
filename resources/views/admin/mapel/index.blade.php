@@ -40,7 +40,7 @@
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('mapel.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                            <a href="{{ route('mapel.edit', Crypt::encrypt($data->id)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                             <button class="btn btn-danger btn-sm"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>
@@ -98,7 +98,7 @@
         </div>
         <div class="modal-footer justify-content-between">
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-            <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+            <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
         </form>
     </div>
     </div>

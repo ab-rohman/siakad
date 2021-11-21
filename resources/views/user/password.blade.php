@@ -7,7 +7,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title text-capitalize">Ubah Password {{ Auth::user()->name }}</h3>
       </div>
@@ -37,7 +37,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
+          <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
         </div>
       </form>
     </div>

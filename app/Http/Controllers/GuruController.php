@@ -203,7 +203,7 @@ class GuruController extends Controller
         } else {
         }
         $guru->restore();
-        return redirect()->back()->with('info', 'Data guru berhasil direstore! (Silahkan cek data guru)');
+        return redirect()->back()->with('info', 'Data Ustadz berhasil direstore! (Silahkan cek data Ustadz)');
     }
 
     public function kill($id)
@@ -220,7 +220,7 @@ class GuruController extends Controller
         } else {
         }
         $guru->forceDelete();
-        return redirect()->back()->with('success', 'Data guru berhasil dihapus secara permanent');
+        return redirect()->back()->with('success', 'Data Ustadz berhasil dihapus secara permanent');
     }
 
     public function ubah_foto($id)
@@ -362,7 +362,7 @@ class GuruController extends Controller
         $nama_file = rand() . $file->getClientOriginalName();
         $file->move('file_guru', $nama_file);
         Excel::import(new GuruImport, public_path('/file_guru/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Guru Berhasil Diimport!');
+        return redirect()->back()->with('success', 'Data Ustadz Berhasil Diimport!');
     }
 
     public function deleteAll()
@@ -371,9 +371,9 @@ class GuruController extends Controller
         if ($guru->count() >= 1) {
             Guru::whereNotNull('id')->delete();
             Guru::withTrashed()->whereNotNull('id')->forceDelete();
-            return redirect()->back()->with('success', 'Data table guru berhasil dihapus!');
+            return redirect()->back()->with('success', 'Data table Ustadz berhasil dihapus!');
         } else {
-            return redirect()->back()->with('warning', 'Data table guru kosong!');
+            return redirect()->back()->with('warning', 'Data table Ustadz kosong!');
         }
     }
 }

@@ -1,9 +1,9 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Siswa {{ $kelas->nama_kelas }}
+  Data Santri {{ $kelas->nama_kelas }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Siswa</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('siswa.index') }}">Santri</a></li>
   <li class="breadcrumb-item active">{{ $kelas->nama_kelas }}</li>
 @endsection
 @section('content')
@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Siswa</th>
+                    <th>Nama Santri</th>
                     <th>No Induk</th>
                     <th>Foto</th>
                     <th>Aksi</th>
@@ -41,7 +41,7 @@
                                 @csrf
                                 @method('delete')
                                 <a href="{{ route('siswa.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
-                                <a href="{{ route('siswa.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                                <a href="{{ route('siswa.edit', Crypt::encrypt($data->id)) }}" class="btn btn-teal btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                                 <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                             </form>
                         </td>

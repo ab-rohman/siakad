@@ -8,7 +8,7 @@
     $no = 1;
 @endphp
 <div class="col-md-12">
-    <div class="card card-primary">
+    <div class="card card-teal">
         <div class="card-header">
           <h3 class="card-title">Trash Data Mapel</h3>
         </div>
@@ -39,7 +39,7 @@
                         <form action="{{ route('mapel.kill', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('mapel.restore', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-undo"></i> &nbsp; Restore</a>
+                            <a href="{{ route('mapel.restore', Crypt::encrypt($data->id)) }}" class="btn btn-teal btn-sm mt-2"><i class="nav-icon fas fa-undo"></i> &nbsp; Restore</a>
                             <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>

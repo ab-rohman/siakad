@@ -64,9 +64,9 @@ class UserController extends Controller
                     'role' => $request->role,
                     'id_card' => $request->nomer,
                 ]);
-                return redirect()->back()->with('success', 'Berhasil menambahkan user Guru baru!');
+                return redirect()->back()->with('success', 'Berhasil menambahkan user Ustadz baru!');
             } else {
-                return redirect()->back()->with('error', 'Maaf User ini tidak terdaftar sebagai guru!');
+                return redirect()->back()->with('error', 'Maaf User ini tidak terdaftar sebagai Ustadz!');
             }
         } elseif ($request->role == 'Siswa') {
             $countSiswa = Siswa::where('no_induk', $request->nomer)->count();

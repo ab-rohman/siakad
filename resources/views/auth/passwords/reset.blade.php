@@ -51,7 +51,7 @@
     </div>
     <div class="row mb-2">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Reset Password') }}</button>
+        <button type="submit" class="btn btn-teal btn-block">{{ __('Reset Password') }}</button>
       </div>
       <!-- /.col -->
     </div>
@@ -59,7 +59,7 @@
 
   <div class="row">
     <div class="col-6">
-      <a href="{{ route('login') }}" class="text-center btn btn-light text-blue">Login Saja</a>
+      <a href="{{ route('login') }}" class="text-center btn btn-light text-teal">Login Saja</a>
     </div>
   </div>
 </div>

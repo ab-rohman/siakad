@@ -1,9 +1,9 @@
 @extends('template_backend.home')
 @section('heading')
-  Data Guru {{ $mapel->nama_mapel }}
+  Data Ustadz {{ $mapel->nama_mapel }}
 @endsection
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Ustadz</a></li>
   <li class="breadcrumb-item active">{{ $mapel->nama_mapel }}</li>
 @endsection
 @section('content')
@@ -43,7 +43,7 @@
                             @csrf
                             @method('delete')
                             <a href="{{ route('guru.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm mt-2"><i class="nav-icon fas fa-id-card"></i> &nbsp; Detail</a>
-                            <a href="{{ route('guru.edit', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                            <a href="{{ route('guru.edit', Crypt::encrypt($data->id)) }}" class="btn btn-teal btn-sm mt-2"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                             <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>

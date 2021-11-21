@@ -66,9 +66,9 @@ class RapotController extends Controller
                     'k_deskripsi' => $request->deskripsi,
                 ]
             );
-            return response()->json(['success' => 'Nilai rapot siswa berhasil ditambahkan!']);
+            return response()->json(['success' => 'Nilai rapot Santri berhasil ditambahkan!']);
         } else {
-            return response()->json(['error' => 'Maaf guru ini tidak mengajar kelas ini!']);
+            return response()->json(['error' => 'Maaf Ustadz ini tidak mengajar kelas ini!']);
         }
     }
 

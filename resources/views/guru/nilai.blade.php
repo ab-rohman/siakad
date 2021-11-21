@@ -6,7 +6,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
         <div class="card-header">
             <h3 class="card-title">Deskripsi Nilai</h3>
         </div>
@@ -20,7 +20,7 @@
                         <input type="hidden" name="id" value="{{ $nilai->id }}">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="nama_gur">Nama Guru</label>
+                                <label for="nama_guru">Nama Ustadz</label>
                                 <input type="text" id="nama_gur" name="nama_gur" value="{{ $guru->nama_guru }}" class="form-control" readonly>
                             </div>
                             <div class="form-group">
@@ -57,7 +57,7 @@
                     @else
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="nama_gur">Nama Guru</label>
+                                <label for="nama_gur">Nama Ustadz</label>
                                 <input type="text" id="nama_gur" name="nama_gur" value="{{ $guru->nama_guru }}" class="form-control" readonly>
                             </div>
                             <div class="form-group">
@@ -98,7 +98,7 @@
 
             <div class="card-footer">
                 <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-                <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Simpan</button>
+                <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Simpan</button>
             </div>
         </form>
     </div>

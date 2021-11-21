@@ -69,8 +69,8 @@
                     <option value="">-- Select {{ __('Level User') }} --</option>
                     <option value="Admin">Admin</option>
                     <option value="Operator">Operator</option>
-                    <option value="Guru">Guru</option>
-                    <option value="Siswa">Siswa</option>
+                    <option value="Guru">Ustadz</option>
+                    <option value="Siswa">Santri</option>
                   </select>
                   @error('role')
                     <span class="invalid-feedback" role="alert">
@@ -103,7 +103,7 @@
         </div>
         <div class="modal-footer justify-content-between">
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-            <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+            <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
         </form>
     </div>
     </div>
@@ -118,7 +118,7 @@
             if (kel == "Guru") {
               $("#noId").html('<label for="nomer">Nomer Id Card</label><input id="nomer" type="text" maxlength="5" onkeypress="return inputAngka(event)" placeholder="No Id Card" class="form-control" name="nomer" autocomplete="off">');
             } else if(kel == "Siswa") {
-              $("#noId").html(`<label for="nomer">Nomer Induk Siswa</label><input id="nomer" type="text" placeholder="No Induk Siswa" class="form-control" name="nomer" autocomplete="off">`);
+              $("#noId").html(`<label for="nomer">Nomer Induk Santri</label><input id="nomer" type="text" placeholder="No Induk Santri" class="form-control" name="nomer" autocomplete="off">`);
             } else if(kel == "Admin" || kel == "Operator") {
               $("#noId").html(`<label for="name">Username</label><input id="name" type="text" placeholder="Username" class="form-control" name="name" autocomplete="off">`);
             } else {

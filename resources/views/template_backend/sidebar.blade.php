@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-teal elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link" style="">
         <img src="{{ asset('img/favicon.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
@@ -45,15 +45,15 @@
                         </a>
                         <ul class="nav nav-treeview ml-4">
                             <li class="nav-item">
-                                <a href="{{ route('jadwal.index') }}" class="nav-link" id="DataJadwal">
-                                    <i class="fas fa-calendar-alt nav-icon"></i>
-                                    <p>Data Jadwal</p>
+                                <a href="{{ route('guru.index') }}" class="nav-link" id="DataGuru">
+                                    <i class="fas fa-users nav-icon"></i>
+                                    <p>Data Ustadz</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('guru.index') }}" class="nav-link" id="DataGuru">
-                                    <i class="fas fa-users nav-icon"></i>
-                                    <p>Data Guru</p>
+                                <a href="{{ route('mapel.index') }}" class="nav-link" id="DataMapel">
+                                    <i class="fas fa-book nav-icon"></i>
+                                    <p>Data Mapel</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -65,13 +65,13 @@
                             <li class="nav-item">
                                 <a href="{{ route('siswa.index') }}" class="nav-link" id="DataSiswa">
                                     <i class="fas fa-users nav-icon"></i>
-                                    <p>Data Siswa</p>
+                                    <p>Data Santri</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('mapel.index') }}" class="nav-link" id="DataMapel">
-                                    <i class="fas fa-book nav-icon"></i>
-                                    <p>Data Mapel</p>
+                                <a href="{{ route('jadwal.index') }}" class="nav-link" id="DataJadwal">
+                                    <i class="fas fa-calendar-alt nav-icon"></i>
+                                    <p>Data Jadwal</p>
                                 </a>
                             </li>
                             <li class="nav-item">

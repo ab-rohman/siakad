@@ -1,15 +1,15 @@
 @extends('template_backend.home')
-@section('heading', 'Edit Guru')
+@section('heading', 'Edit Ustadz')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
-  <li class="breadcrumb-item active">Edit Guru</li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Ustadz</a></li>
+  <li class="breadcrumb-item active">Edit Ustadz</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
-        <h3 class="card-title">Edit Data Guru</h3>
+        <h3 class="card-title">Edit Data Ustadz</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->
@@ -20,7 +20,7 @@
           <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="nama_guru">Nama Guru</label>
+                    <label for="nama_guru">Nama Ustadz</label>
                     <input type="text" id="nama_guru" name="nama_guru" value="{{ $guru->nama_guru }}" class="form-control @error('nama_guru') is-invalid @enderror">
                 </div>
                 <div class="form-group">
@@ -85,7 +85,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+          <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
         </div>
       </form>
     </div>

@@ -6,9 +6,9 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
-        <h3 class="card-title">Nilai Rapot Siswa</h3>
+        <h3 class="card-title">Nilai Rapot Santri</h3>
       </div>
       <!-- /.card-header -->
       <!-- form start -->
@@ -18,12 +18,12 @@
             <div class="col-md-12">
                 <table class="table" style="margin-top: -10px;">
                     <tr>
-                        <td>No Induk Siswa</td>
+                        <td>No Induk Santri</td>
                         <td>:</td>
                         <td>{{ Auth::user()->no_induk }}</td>
                     </tr>
                     <tr>
-                        <td>Nama Siswa</td>
+                        <td>Nama Santri</td>
                         <td>:</td>
                         <td class="text-capitalize">{{ Auth::user()->name }}</td>
                     </tr>

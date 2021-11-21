@@ -7,7 +7,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title">Edit Data Jadwal</h3>
       </div>
@@ -46,11 +46,11 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="guru_id">Kode Guru</label>
+                <label for="guru_id">Kode Ustadz</label>
                 <select id="guru_id" name="guru_id" class="form-control @error('guru_id') is-invalid @enderror select2bs4">
                   <option value="" @if ($jadwal->guru_id)
                     selected
-                  @endif>-- Pilih Kode Guru --</option>
+                  @endif>-- Pilih Kode Ustadz --</option>
                   @foreach ($guru as $data)
                     <option value="{{ $data->id }}"
                       @if ($jadwal->guru_id == $data->id)
@@ -90,7 +90,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
+          <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
         </div>
       </form>
     </div>

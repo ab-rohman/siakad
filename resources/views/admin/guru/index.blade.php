@@ -1,20 +1,20 @@
 @extends('template_backend.home')
-@section('heading', 'Data Guru')
+@section('heading', 'Data Ustadz')
 @section('page')
-  <li class="breadcrumb-item active">Data Guru</li>
+  <li class="breadcrumb-item active">Data Ustadz</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">
-                <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
-                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Guru
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Ustadz
                 </button>
                 <a href="{{ route('guru.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#importExcel">
+                {{--  <button type="button" class="btn btn-teal btn-sm" data-toggle="modal" data-target="#importExcel">
                     <i class="nav-icon fas fa-file-import"></i> &nbsp; IMPORT EXCEL
-                </button>
+                </button>  --}}
                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dropTable">
                     <i class="nav-icon fas fa-minus-circle"></i> &nbsp; Drop
                 </button>
@@ -29,14 +29,14 @@
 						</div>
 						<div class="modal-body">
 							@csrf
-                            <div class="card card-outline card-primary">
+                            <div class="card card-outline card-teal">
                                 <div class="card-header">
                                     <h5 class="modal-title">Petunjuk :</h5>
                                 </div>
                                 <div class="card-body">
                                     <ul>
-                                        <li>rows 1 = nama guru</li>
-                                        <li>rows 2 = nip guru</li>
+                                        <li>rows 1 = nama Ustadz</li>
+                                        <li>rows 2 = nip Ustadz</li>
                                         <li>rows 3 = jenis kelamin</li>
                                         <li>rows 4 = mata pelajaran</li>
                                     </ul>
@@ -49,7 +49,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-primary">Import</button>
+							<button type="submit" class="btn btn-teal">Import</button>
 						</div>
 					</div>
 				</form>
@@ -79,7 +79,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Nama Mapel</th>
-                    <th>Lihat Guru</th>
+                    <th>Lihat Ustadz</th>
                 </tr>
             </thead>
             <tbody>
@@ -103,7 +103,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
       <div class="modal-header">
-          <h4 class="modal-title">Tambah Data Guru</h4>
+          <h4 class="modal-title">Tambah Data Ustadz</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
           </button>
@@ -114,7 +114,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="nama_guru">Nama Guru</label>
+                        <label for="nama_guru">Nama Ustadz</label>
                         <input type="text" id="nama_guru" name="nama_guru" class="form-control @error('nama_guru') is-invalid @enderror">
                     </div>
                     <div class="form-group">
@@ -188,7 +188,7 @@
           </div>
           <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-              <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+              <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
           </form>
       </div>
       </div>

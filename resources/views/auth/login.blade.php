@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page', 'Login Authentication')
+@section('page', '')
 @section('content')
 <div class="card-body login-card-body">
   <p class="login-box-msg">Sign in to start your session</p>
@@ -34,7 +34,7 @@
     </div>
     <div class="row mb-1">
       <div class="col-7">
-        <div class="icheck-primary">
+        <div class="icheck-teal">
           <input type="checkbox" id="remember" class="form-check-input" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} disabled>
           <label for="remember">
             {{ __('Remember Me') }}

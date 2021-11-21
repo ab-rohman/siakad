@@ -7,7 +7,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title text-capitalize">Edit Profile {{ Auth::user()->name }}</h3>
       </div>
@@ -21,7 +21,7 @@
               <input type="hidden" name="role" value="{{ Auth::user()->guru(Auth::user()->id_card)->role }}">
               <div class="col-md-6">
                   <div class="form-group">
-                      <label for="name">Nama Guru</label>
+                      <label for="name">Nama Ustadz</label>
                       <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control @error('name') is-invalid @enderror">
                   </div>
                   <div class="form-group">
@@ -90,7 +90,7 @@
                       <input type="text" id="no_induk" name="no_induk" value="{{ Auth::user()->siswa(Auth::user()->no_induk)->no_induk }}" class="form-control" disabled>
                   </div>
                   <div class="form-group">
-                      <label for="name">Nama Siswa</label>
+                      <label for="name">Nama Santri</label>
                       <input type="text" id="name" name="name" value="{{ Auth::user()->name }}" class="form-control @error('name') is-invalid @enderror">
                   </div>
                   <div class="form-group">
@@ -157,7 +157,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Simpan</button>
+          <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Simpan</button>
         </div>
       </form>
     </div>

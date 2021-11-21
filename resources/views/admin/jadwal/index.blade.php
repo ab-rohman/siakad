@@ -8,13 +8,13 @@
     <div class="card">
       <div class="card-header">
           <h3 class="card-title">
-              <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target=".tambah-jadwal">
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".tambah-jadwal">
                   <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Jadwal
               </button>
               <a href="{{ route('jadwal.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
-              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#importExcel">
+              {{--  <button type="button" class="btn btn-teal btn-sm" data-toggle="modal" data-target="#importExcel">
                   <i class="nav-icon fas fa-file-import"></i> &nbsp; IMPORT EXCEL
-              </button>
+              </button>  --}}
               <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dropTable">
                   <i class="nav-icon fas fa-minus-circle"></i> &nbsp; Drop
               </button>
@@ -29,7 +29,7 @@
               </div>
               <div class="modal-body">
                 @csrf
-                  <div class="card card-outline card-primary">
+                  <div class="card card-outline card-teal">
                       <div class="card-header">
                           <h5 class="modal-title">Petunjuk :</h5>
                       </div>
@@ -38,7 +38,7 @@
                               <li>rows 1 = nama hari</li>
                               <li>rows 2 = nama kelas</li>
                               <li>rows 3 = nama mapel</li>
-                              <li>rows 4 = nama guru</li>
+                              <li>rows 4 = nama ustadz</li>
                               <li>rows 5 = jam mulai</li>
                               <li>rows 6 = jam selesai</li>
                               <li>rows 7 = nama ruang</li>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Import</button>
+                  <button type="submit" class="btn btn-teal">Import</button>
                 </div>
               </div>
             </form>
@@ -138,9 +138,9 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="guru_id">Kode Guru</label>
+                  <label for="guru_id">Kode Ustadz</label>
                   <select id="guru_id" name="guru_id" class="form-control @error('guru_id') is-invalid @enderror select2bs4">
-                      <option value="">-- Pilih Kode Guru --</option>
+                      <option value="">-- Pilih Kode Ustadz --</option>
                       @foreach ($guru as $data)
                           <option value="{{ $data->id }}">{{ $data->kode }}</option>
                       @endforeach
@@ -170,7 +170,7 @@
           </div>
           <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-              <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+              <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
           </form>
       </div>
       </div>

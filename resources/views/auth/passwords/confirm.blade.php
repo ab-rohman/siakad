@@ -21,7 +21,7 @@
     </div>
     <div class="row mb-1">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Confirm Password') }}</button>
+        <button type="submit" class="btn btn-teal btn-block">{{ __('Confirm Password') }}</button>
       </div>
       <!-- /.col -->
     </div>

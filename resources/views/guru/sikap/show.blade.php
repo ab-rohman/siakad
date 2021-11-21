@@ -6,7 +6,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title">Entry Nilai Sikap</h3>
       </div>
@@ -26,7 +26,7 @@
                         <td>{{ $kelas->guru->nama_guru }}</td>
                     </tr>
                     <tr>
-                        <td>Jumlah Siswa</td>
+                        <td>Jumlah Santri</td>
                         <td>:</td>
                         <td>{{ $siswa->count() }}</td>
                     </tr>
@@ -36,7 +36,7 @@
                         <td>{{ $guru->mapel->nama_mapel }}</td>
                     </tr>
                     <tr>
-                        <td>Guru Mata Pelajaran</td>
+                        <td>Ustadz Mata Pelajaran</td>
                         <td>:</td>
                         <td>{{ $guru->nama_guru }}</td>
                     </tr>
@@ -74,14 +74,14 @@
                     <thead>
                         <tr>
                             <th rowspan="2" class="ctr">No.</th>
-                            <th rowspan="2">Nama Siswa</th>
+                            <th rowspan="2">Nama Santri</th>
                             <th colspan="3" class="ctr">Nilai Sikap</th>
                             <th rowspan="2" class="ctr">Aksi</th>
                         </tr>
                         <tr>
                             <th class="ctr">Teman</th>
                             <th class="ctr">Sendiri</th>
-                            <th class="ctr">Guru</th>
+                            <th class="ctr">Ustadz</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -169,7 +169,7 @@
                     sikap_3 : sikap_3
                 },
                 success: function(data){
-                    toastr.success("Nilai sikap siswa berhasil ditambahkan!");
+                    toastr.success("Nilai sikap Santri berhasil ditambahkan!");
                     location.reload();
                 },
                 error: function (data) {

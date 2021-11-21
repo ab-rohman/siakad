@@ -1,13 +1,13 @@
 @extends('template_backend.home')
-@section('heading', 'Trash Guru')
+@section('heading', 'Trash Ustadz')
 @section('page')
-  <li class="breadcrumb-item active">Trash Guru</li>
+  <li class="breadcrumb-item active">Trash Ustadz</li>
 @endsection
 @section('content')
 <div class="col-md-12">
-    <div class="card card-primary">
+    <div class="card card-teal">
         <div class="card-header">
-          <h3 class="card-title">Trash Data Guru</h3>
+          <h3 class="card-title">Trash Data Ustadz</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -15,9 +15,9 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Guru</th>
+                    <th>Nama Ustadz</th>
                     <th>Id Card</th>
-                    <th>Guru Mapel</th>
+                    <th>Ustadz Mapel</th>
                     <th>Foto</th>
                     <th>Aksi</th>
                 </tr>
@@ -39,7 +39,7 @@
                         <form action="{{ route('guru.kill', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('guru.restore', Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm mt-2"><i class="nav-icon fas fa-undo"></i> &nbsp; Restore</a>
+                            <a href="{{ route('guru.restore', Crypt::encrypt($data->id)) }}" class="btn btn-teal btn-sm mt-2"><i class="nav-icon fas fa-undo"></i> &nbsp; Restore</a>
                             <button class="btn btn-danger btn-sm mt-2"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>

@@ -1,13 +1,13 @@
 @extends('template_backend.home')
 @section('heading', 'Ubah Foto')
 @section('page')
-  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Guru</a></li>
+  <li class="breadcrumb-item active"><a href="{{ route('guru.index') }}">Ustadz</a></li>
   <li class="breadcrumb-item active">Ubah Foto</li>
 @endsection
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
           <div class="row">
             <div class="col-md-6">
@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="name">Nama Guru</label>
+                        <label for="name">Nama Ustadz</label>
                         <input type="text" name="name" class="form-control" value="{{ Auth::user()->name }}" disabled>
                     </div>
                     <div class="form-group">
@@ -54,7 +54,7 @@
 
         <div class="card-footer">
             <a href="{{ route("profile") }}" class="btn btn-default"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-            <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-upload"></i> &nbsp; Upload</button>
+            <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-upload"></i> &nbsp; Upload</button>
         </div>
       </form>
     </div>

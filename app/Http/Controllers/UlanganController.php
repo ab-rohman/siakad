@@ -119,9 +119,9 @@ class UlanganController extends Controller
                     'uas' => $request->uas,
                 ]
             );
-            return response()->json(['success' => 'Nilai ulangan siswa berhasil ditambahkan!']);
+            return response()->json(['success' => 'Nilai ulangan Santri berhasil ditambahkan!']);
         } else {
-            return response()->json(['error' => 'Maaf guru ini tidak mengajar kelas ini!']);
+            return response()->json(['error' => 'Maaf Ustadz ini tidak mengajar kelas ini!']);
         }
     }
 

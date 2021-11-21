@@ -21,18 +21,18 @@
     </div>
     <div class="row mb-3">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Send Password Reset Link') }}</button>
+        <button type="submit" class="btn btn-teal btn-block">{{ __('Send Password Reset Link') }}</button>
       </div>
       <!-- /.col -->
     </div>
     
     <div class="row">
       <div class="col-6">
-        <a href="{{ route('login') }}" class="text-center btn-block btn btn-light text-blue">Login Saja</a>
+        <a href="{{ route('login') }}" class="text-center btn-block btn btn-light text-">Login Saja</a>
       </div>
       <!-- /.col -->
       <div class="col-6">
-        <a href="{{ route('register') }}" class="text-center btn-block btn btn-light text-blue">Buat Akun</a>
+        <a href="{{ route('register') }}" class="text-center btn-block btn btn-light text-teal">Buat Akun</a>
       </div>
       <!-- /.col -->
     </div>

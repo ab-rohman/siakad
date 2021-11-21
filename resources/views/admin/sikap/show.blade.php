@@ -6,7 +6,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title">Show Nilai Sikap</h3>
       </div>
@@ -16,12 +16,12 @@
             <div class="col-md-12">
                 <table class="table" style="margin-top: -10px;">
                     <tr>
-                        <td>No Induk Siswa</td>
+                        <td>No Induk Santri</td>
                         <td>:</td>
                         <td>{{ $siswa->no_induk }}</td>
                     </tr>
                     <tr>
-                        <td>Nama Siswa</td>
+                        <td>Nama Santri</td>
                         <td>:</td>
                         <td>{{ $siswa->nama_siswa }}</td>
                     </tr>
@@ -69,13 +69,13 @@
                     <thead>
                         <tr>
                             <th rowspan="2" class="ctr">No.</th>
-                            <th rowspan="2">Nama Siswa</th>
+                            <th rowspan="2">Nama Santri</th>
                             <th colspan="3" class="ctr">Nilai Sikap</th>
                         </tr>
                         <tr>
                             <th class="ctr">Teman</th>
                             <th class="ctr">Sendiri</th>
-                            <th class="ctr">Guru</th>
+                            <th class="ctr">Ustadz</th>
                         </tr>
                     </thead>
                     <tbody>

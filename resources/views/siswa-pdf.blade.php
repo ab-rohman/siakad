@@ -19,7 +19,7 @@
                     </tr>
                     <tr>
                         <th>No. Induk</th>
-                        <th>Nama Siswa</th>
+                        <th>Nama santri</th>
                         <th>L/P</th>
                         <th>Foto</th>
                     </tr>

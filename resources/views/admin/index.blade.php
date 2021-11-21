@@ -21,7 +21,7 @@
         <div class="small-box bg-warning">
             <div class="inner" style="color: #FFFFFF;">
                 <h3>{{ $guru }}</h3>
-                <p>Guru</p>
+                <p>Ustadz</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
@@ -30,10 +30,10 @@
         </div>
     </div>
     <div class="col-lg-4 col-6">
-        <div class="small-box bg-success">
+        <div class="small-box bg-teal">
             <div class="inner">
                 <h3>{{ $siswa }}</h3>
-                <p>Siswa</p>
+                <p>Santri</p>
             </div>
             <div class="icon">
                 <i class="fas fa-id-card nav-icon"></i>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="col-lg-4 col-6">
-        <div class="small-box bg-primary">
+        <div class="small-box bg-teal">
             <div class="inner">
                 <h3>{{ $mapel }}</h3>
                 <p>Mapel</p>
@@ -82,10 +82,10 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">DataGuru</span>
+                        <span class="text-bold text-lg">DataUstadz</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
-                        <span class="text-success">
+                        <span class="text-teal">
                             <i class="fas fa-arrow-up"></i> {{ $guru }}
                         </span>
                     </p>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-4">
                             <ul class="chart-legend clearfix">
-                                <li><i class="far fa-circle text-primary"></i> Laki-laki</li>
+                                <li><i class="far fa-circle text-teal"></i> Laki-laki</li>
                                 <li><i class="far fa-circle text-danger"></i> Perempuan</li>
                             </ul>
                         </div>
@@ -113,10 +113,10 @@
             <div class="card-body">
                 <div class="d-flex">
                     <p class="d-flex flex-column">
-                        <span class="text-bold text-lg">Data Siswa</span>
+                        <span class="text-bold text-lg">Data Santri</span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
-                        <span class="text-success">
+                        <span class="text-teal">
                             <i class="fas fa-arrow-up"></i> {{ $siswa }}
                         </span>
                     </p>
@@ -130,7 +130,7 @@
                         </div>
                         <div class="col-md-4">
                             <ul class="chart-legend clearfix">
-                                <li><i class="far fa-circle text-primary"></i> Laki-laki</li>
+                                <li><i class="far fa-circle text-teal"></i> Laki-laki</li>
                                 <li><i class="far fa-circle text-danger"></i> Perempuan</li>
                             </ul>
                         </div>
@@ -147,7 +147,7 @@
                         <span class="text-bold text-lg">Kelas / Paket Keahlian </span>
                     </p>
                     <p class="ml-auto d-flex flex-column text-right">
-                        <span class="text-success">
+                        <span class="text-teal">
                             <i class="fas fa-arrow-up"></i> {{ $kelas }}
                         </span>
                     </p>
@@ -161,14 +161,17 @@
                         </div>
                         <div class="col-md-4">
                             <ul class="chart-legend clearfix">
-                                <li><i class="far fa-circle" style="color: #d4c148"></i> Bisnis kontruksi dan Properti</li>
+                                <li><i class="far fa-circle" style="color: #d4c148"></i> Fikih </li>
+                                <li><i class="far fa-circle" style="color: #2cabe6"></i> Akhlak </li>
+                                <li><i class="far fa-circle" style="color: #ba6906"></i> Nahwu Shorof </li>
+                                {{--  <li><i class="far fa-circle" style="color: #d4c148"></i> Bisnis kontruksi dan Properti</li>
                                 <li><i class="far fa-circle" style="color: #ba6906"></i> Desain Permodelan dan Informasi Bangunan</li>
                                 <li><i class="far fa-circle" style="color: #ff990a"></i> Elektronika Industri</li>
                                 <li><i class="far fa-circle" style="color: #00a352"></i> Otomasi Industri</li>
                                 <li><i class="far fa-circle" style="color: #2cabe6"></i> Teknik dan Bisnis Sepeda Motor</li>
                                 <li><i class="far fa-circle" style="color: #999999"></i> Rekayasa Perangkat Lunak</li>
                                 <li><i class="far fa-circle" style="color: #0b2e75"></i> Teknik Pemesinan</li>
-                                <li><i class="far fa-circle" style="color: #7980f7"></i> Teknik Pengelasan</li>
+                                <li><i class="far fa-circle" style="color: #7980f7"></i> Teknik Pengelasan</li>  --}}
                             </ul>
                         </div>
                     </div>
@@ -234,14 +237,17 @@
             var pieChartCanvasPaket = $('#pieChartPaket').get(0).getContext('2d')
             var pieDataPaket        = {
                 labels: [
-                    'Bisnis kontruksi dan Properti',
-                    'Desain Permodelan dan Informasi Bangunan',
-                    'Elektronika Industri',
-                    'Otomasi Industri',
-                    'Teknik dan Bisnis Sepeda Motor',
-                    'Rekayasa Perangkat Lunak',
-                    'Teknik Pemesinan',
-                    'Teknik Pengelasan',
+                    'Fikih',
+                    'Akhlak',
+                    'Nahwu Shorof',
+                    // 'Bisnis kontruksi dan Properti',
+                    // 'Desain Permodelan dan Informasi Bangunan',
+                    // 'Elektronika Industri',
+                    // 'Otomasi Industri',
+                    // 'Teknik dan Bisnis Sepeda Motor',
+                    // 'Rekayasa Perangkat Lunak',
+                    // 'Teknik Pemesinan',
+                    // 'Teknik Pengelasan',
                 ],
                 datasets: [
                     {

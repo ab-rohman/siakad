@@ -27,7 +27,7 @@
                   @if ($d == 'Guru')
                     <th>No Id Card</th>
                   @elseif ($d == 'Siswa')
-                    <th>No Induk Siswa</th>
+                    <th>No Induk Santri</th>
                   @else
                       
                   @endif

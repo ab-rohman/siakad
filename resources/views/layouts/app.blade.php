@@ -60,7 +60,7 @@
           } else if(kel == "Siswa") {
             $("#noId").addClass("mb-3");
             $("#noId").html(`
-              <input id="nomer" type="text" placeholder="No Induk Siswa" class="form-control" name="nomer" autocomplete="nomer">
+              <input id="nomer" type="text" placeholder="No Induk Santri" class="form-control" name="nomer" autocomplete="nomer">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <span class="fas fa-id-card"></span>
@@ -92,22 +92,22 @@
 
 @error('id_card')
   <script>
-    toastr.error("Maaf User ini tidak terdaftar sebagai Guru Pondok Pesantren Nurul Huda!");
+    toastr.error("Maaf User ini tidak terdaftar sebagai Ustadz Pondok Pesantren Nurul Huda!");
   </script>
 @enderror
 @error('guru')
   <script>
-    toastr.error("Maaf Guru ini sudah terdaftar sebagai User!");
+    toastr.error("Maaf Ustadz ini sudah terdaftar sebagai User!");
   </script>
 @enderror
 @error('no_induk')
   <script>
-    toastr.error("Maaf User ini tidak terdaftar sebagai Siswa Pondok Pesantren Nurul Huda!");
+    toastr.error("Maaf User ini tidak terdaftar sebagai Santri Pondok Pesantren Nurul Huda!");
   </script>
 @enderror
 @error('siswa')
   <script>
-    toastr.error("Maaf Siswa ini sudah terdaftar sebagai User!");
+    toastr.error("Maaf Santri ini sudah terdaftar sebagai User!");
   </script>
 @enderror
 @if (session('status'))

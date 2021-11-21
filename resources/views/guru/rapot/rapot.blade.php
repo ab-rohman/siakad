@@ -6,7 +6,7 @@
 @section('content')
 <div class="col-md-12">
     <!-- general form elements -->
-    <div class="card card-primary">
+    <div class="card card-teal">
       <div class="card-header">
         <h3 class="card-title">Entry Nilai Rapot</h3>
       </div>
@@ -26,7 +26,7 @@
                         <td>{{ $kelas->guru->nama_guru }}</td>
                     </tr>
                     <tr>
-                        <td>Jumlah Siswa</td>
+                        <td>Jumlah Santri</td>
                         <td>:</td>
                         <td>{{ $siswa->count() }}</td>
                     </tr>
@@ -36,7 +36,7 @@
                         <td>{{ $guru->mapel->nama_mapel }}</td>
                     </tr>
                     <tr>
-                        <td>Guru Mata Pelajaran</td>
+                        <td>Ustadz Mata Pelajaran</td>
                         <td>:</td>
                         <td>{{ $guru->nama_guru }}</td>
                     </tr>
@@ -74,7 +74,7 @@
                     <thead>
                         <tr>
                             <th class="ctr" rowspan="2">No.</th>
-                            <th rowspan="2">Nama Siswa</th>
+                            <th rowspan="2">Nama Santri</th>
                             <th class="ctr" colspan="3">Pengetahuan</th>
                             <th class="ctr" colspan="3">Keterampilan</th>
                             <th class="ctr" rowspan="2">Aksi</th>
@@ -238,7 +238,7 @@
                         $(".knilai_"+id).append(nilai);
                         $(".kpredikat_"+id).append(predikat);
                         $(".sub_"+id).append(ok);
-                        toastr.success("Nilai rapot siswa berhasil ditambahkan!");
+                        toastr.success("Nilai rapot Santri berhasil ditambahkan!");
                     },
                     error: function (data) {
                         toastr.warning("Errors 404!");

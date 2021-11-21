@@ -22,8 +22,8 @@
     <div class="input-group mb-3">
       <select id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" autocomplete="role">
         <option value="">-- Select {{ __('Level User') }} --</option>
-        <option value="Guru">Guru</option>
-        <option value="Siswa">Siswa</option>
+        <option value="Guru">Ustadz</option>
+        <option value="Siswa">Santri</option>
       </select>
       <div class="input-group-append">
         <div class="input-group-text">
@@ -67,11 +67,11 @@
     </div>
     <div class="row mb-3">
       <div class="col-6">
-        <a href="{{ route('login') }}" class="text-center btn btn-light text-blue">Login Saja</a>
+        <a href="{{ route('login') }}" class="text-center btn btn-light text-teal">Login Saja</a>
       </div>
       <!-- /.col -->
       <div class="col-6 justify-content-end">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Register') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
+        <button type="submit" class="btn btn-teal btn-block">{{ __('Register') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
       </div>
       <!-- /.col -->
     </div>

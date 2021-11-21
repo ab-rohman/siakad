@@ -30,7 +30,7 @@ class SikapController extends Controller
             $kelas = $jadwal->groupBy('kelas_id');
             return view('guru.sikap.index', compact('kelas', 'guru'));
         } else {
-            return redirect()->back()->with('error', 'Maaf guru ini tidak dapat menambahkan nilai sikap!');
+            return redirect()->back()->with('error', 'Maaf Ustadz ini tidak dapat menambahkan nilai sikap!');
         }
     }
 
@@ -74,12 +74,12 @@ class SikapController extends Controller
                         'sikap_3' => $request->sikap_3
                     ]
                 );
-                return response()->json(['success' => 'Nilai sikap siswa berhasil ditambahkan!']);
+                return response()->json(['success' => 'Nilai sikap Santri berhasil ditambahkan!']);
             } else {
-                return redirect()->json(['error' => 'Maaf guru ini tidak dapat menambahkan nilai sikap!']);
+                return redirect()->json(['error' => 'Maaf Ustadz ini tidak dapat menambahkan nilai sikap!']);
             }
         } else {
-            return response()->json(['error' => 'Maaf guru ini tidak mengajar kelas ini!']);
+            return response()->json(['error' => 'Maaf Ustadz ini tidak mengajar kelas ini!']);
         }
     }
 

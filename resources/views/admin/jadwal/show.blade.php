@@ -10,7 +10,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <a href="{{ route('jadwal.index') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
+            <a href="{{ route('jadwal.index') }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -40,7 +40,7 @@
                       <form action="{{ route('jadwal.destroy', $data->id) }}" method="post">
                         @csrf
                         @method('delete')
-                        <a href="{{ route('jadwal.edit',Crypt::encrypt($data->id)) }}" class="btn btn-success btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                        <a href="{{ route('jadwal.edit',Crypt::encrypt($data->id)) }}" class="btn btn-secondary btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                         <button class="btn btn-danger btn-sm"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                       </form>
                     </td>

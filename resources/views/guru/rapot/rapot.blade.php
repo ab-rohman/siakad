@@ -135,7 +135,7 @@
                                                 <textarea class="form-control swal2-textarea textarea-rapot deskripsi_{{$data->id}}" cols="50" rows="5" disabled></textarea>
                                             </td>
                                             <td class="ctr sub_{{$data->id}}">
-                                                <button type="button" id="submit-{{$data->id}}" class="btn btn-default btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
+                                                <button type="button" id="submit-{{$data->id}}" class="btn btn-primary btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
                                             </td>
                                         @endif
                                     @else

@@ -144,7 +144,7 @@
                                         @if ($data->nilai($data->id))
                                             <i class="fas fa-check" style="font-weight:bold;"></i>
                                         @else
-                                            <button type="button" id="submit-{{$data->id}}" class="btn btn-default btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
+                                            <button type="button" id="submit-{{$data->id}}" class="btn btn-primary btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button>
                                         @endif
                                     </td>
                                 </tr>

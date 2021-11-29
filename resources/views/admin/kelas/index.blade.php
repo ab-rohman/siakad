@@ -40,7 +40,7 @@
                             <button type="button" class="btn btn-info btn-sm" onclick="getSubsJadwal({{$data->id}})" data-toggle="modal" data-target=".view-jadwal">
                               <i class="nav-icon fas fa-calendar-alt"></i> &nbsp; View Jadwal
                             </button>
-                            <button type="button" class="btn btn-success btn-sm" onclick="getEditKelas({{$data->id}})" data-toggle="modal" data-target="#form-kelas">
+                            <button type="button" class="btn btn-secondary btn-sm" onclick="getEditKelas({{$data->id}})" data-toggle="modal" data-target="#form-kelas">
                               <i class="nav-icon fas fa-edit"></i> &nbsp; Edit
                             </button>
                             <button class="btn btn-danger btn-sm"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
@@ -88,7 +88,7 @@
           </div>
         </div>
         <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
             <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
       </form>
       </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-default" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
           <a id="link-siswa" href="#" class="btn btn-teal"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
         </div>
       </div>
@@ -182,7 +182,7 @@
         </div>
       </div>
       <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</button>
         <a id="link-jadwal" href="#" class="btn btn-teal"><i class="nav-icon fas fa-download"></i> &nbsp; Download PDF</a>
       </div>
     </div>
@@ -201,9 +201,9 @@
       $('#nama_kelas').val('');
       $('#form_paket').html('');
       $('#form_paket').html(`
-        <label for="paket_id">Paket Keahlian</label>
+        <label for="paket_id">Paket Mata Pelajaran</label>
         <select id="paket_id" name="paket_id" class="select2bs4 form-control @error('paket_id') is-invalid @enderror">
-          <option value="">-- Pilih Paket Keahlian --</option>
+          <option value="">-- Pilih Paket Mata Pelajaran --</option>
           @foreach ($paket as $data)
             <option value="{{ $data->id }}">{{ $data->ket }}</option>
           @endforeach

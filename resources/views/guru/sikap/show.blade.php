@@ -128,7 +128,7 @@
                                     @if ($data->sikap($data->id) && $data->sikap($data->id)['sikap_1'] && $data->sikap($data->id)['sikap_2'] && $data->sikap($data->id)['sikap_3'])
                                         <td class="ctr"><i class="fas fa-check" style="font-weight:bold;"></i></td>
                                     @else
-                                        <td class="ctr sub_{{$data->id}}"><button type="button" id="submit-{{$data->id}}" class="btn btn-default btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button></td>
+                                        <td class="ctr sub_{{$data->id}}"><button type="button" id="submit-{{$data->id}}" class="btn btn-primary btn_click" data-id="{{$data->id}}"><i class="nav-icon fas fa-save"></i></button></td>
                                     @endif
                                 </tr>
                             @endforeach

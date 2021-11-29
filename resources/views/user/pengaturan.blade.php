@@ -60,12 +60,12 @@
                     <tr>
                         <td width="50"><i class="nav-icon fas fa-envelope"></i></td>
                         <td>Ubah Email</td>
-                        <td width="50"><a href="{{ route('pengaturan.email') }}" class="btn btn-default btn-sm">Edit</a></td>
+                        <td width="50"><a href="{{ route('pengaturan.email') }}" class="btn btn-primary btn-sm">Edit</a></td>
                     </tr>
                     <tr>
                         <td width="50"><i class="nav-icon fas fa-key"></i></td>
                         <td>Ubah Password</td>
-                        <td width="50"><a href="{{ route('pengaturan.password') }}" class="btn btn-default btn-sm">Edit</a></td>
+                        <td width="50"><a href="{{ route('pengaturan.password') }}" class="btn btn-primary btn-sm">Edit</a></td>
                     </tr>
                     </table>
                 </div>

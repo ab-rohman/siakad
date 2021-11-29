@@ -10,7 +10,7 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">
-            <a href="{{ route('rapot-kelas') }}" class="btn btn-default btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
+            <a href="{{ route('rapot-kelas') }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-arrow-left"></i> &nbsp; Kembali</a>
         </h3>
       </div>
       <!-- /.card-header -->

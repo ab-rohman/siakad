@@ -53,7 +53,7 @@
         <!-- /.card-body -->
 
         <div class="card-footer">
-            <a href="{{ route("profile") }}" class="btn btn-default"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
+            <a href="{{ route("profile") }}" class="btn btn-primary"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
             <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-upload"></i> &nbsp; Upload</button>
         </div>
       </form>

@@ -16,7 +16,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Kelas</th>
-                    <th>Paket Keahlian</th>
+                    <th>Paket MataPelajaran</th>
                     <th>Wali Kelas</th>
                     <th>Aksi</th>
                 </tr>

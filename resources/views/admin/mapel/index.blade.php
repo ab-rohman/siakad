@@ -40,7 +40,7 @@
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf
                             @method('delete')
-                            <a href="{{ route('mapel.edit', Crypt::encrypt($data->id)) }}" class="btn btn-primary btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
+                            <a href="{{ route('mapel.edit', Crypt::encrypt($data->id)) }}" class="btn btn-secondary btn-sm"><i class="nav-icon fas fa-edit"></i> &nbsp; Edit</a>
                             <button class="btn btn-danger btn-sm"><i class="nav-icon fas fa-trash-alt"></i> &nbsp; Hapus</button>
                         </form>
                     </td>
@@ -88,16 +88,16 @@
                     <label for="kelompok">Kelompok</label>
                     <select id="kelompok" name="kelompok" class="select2bs4 form-control @error('kelompok') is-invalid @enderror">
                       <option value="">-- Pilih Kelompok Mapel --</option>
-                      <option value="A">Pelajaran Umum</option>
-                      <option value="B">Pelajaran Khusus</option>
-                      <option value="C">Pelajaran Keahlian</option>
+                      <option value="A">Pelajaran Fikih</option>
+                      <option value="B">Pelajaran Akhlak</option>
+                      <option value="C">Pelajaran Nahwu Shorof</option>
                     </select>
                 </div>
               </div>
             </div>
         </div>
         <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
             <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
         </form>
     </div>

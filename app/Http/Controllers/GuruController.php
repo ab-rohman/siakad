@@ -92,7 +92,7 @@ class GuruController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Berhasil menambahkan data guru baru!');
+        return redirect()->back()->with('success', 'Berhasil menambahkan data Ustadz baru!');
     }
 
     /**
@@ -156,7 +156,7 @@ class GuruController extends Controller
         ];
         $guru->update($guru_data);
 
-        return redirect()->route('guru.index')->with('success', 'Data guru berhasil diperbarui!');
+        return redirect()->route('guru.index')->with('success', 'Data Ustadz berhasil diperbarui!');
     }
 
     /**
@@ -179,7 +179,7 @@ class GuruController extends Controller
         } else {
         }
         $guru->delete();
-        return redirect()->route('guru.index')->with('warning', 'Data guru berhasil dihapus! (Silahkan cek trash data guru)');
+        return redirect()->route('guru.index')->with('warning', 'Data Ustadz berhasil dihapus! (Silahkan cek trash data Ustadz)');
     }
 
     public function trash()

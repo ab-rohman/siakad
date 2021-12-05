@@ -229,7 +229,7 @@ class JadwalController extends Controller
         $nama_file = rand() . $file->getClientOriginalName();
         $file->move('file_jadwal', $nama_file);
         Excel::import(new JadwalImport, public_path('/file_jadwal/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
+        return redirect()->back()->with('success', 'Data Santri Berhasil Diimport!');
     }
 
     public function deleteAll()

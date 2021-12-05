@@ -86,7 +86,7 @@ class SiswaController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Berhasil menambahkan data siswa baru!');
+        return redirect()->back()->with('success', 'Berhasil menambahkan data Santri baru!');
     }
 
     /**
@@ -151,7 +151,7 @@ class SiswaController extends Controller
         ];
         $siswa->update($siswa_data);
 
-        return redirect()->route('siswa.index')->with('success', 'Data siswa berhasil diperbarui!');
+        return redirect()->route('siswa.index')->with('success', 'Data Santri berhasil diperbarui!');
     }
 
     /**
@@ -168,10 +168,10 @@ class SiswaController extends Controller
             $user = User::where('no_induk', $siswa->no_induk)->first();
             $siswa->delete();
             $user->delete();
-            return redirect()->back()->with('warning', 'Data siswa berhasil dihapus! (Silahkan cek trash data siswa)');
+            return redirect()->back()->with('warning', 'Data Santri berhasil dihapus! (Silahkan cek trash data Santri)');
         } else {
             $siswa->delete();
-            return redirect()->back()->with('warning', 'Data siswa berhasil dihapus! (Silahkan cek trash data siswa)');
+            return redirect()->back()->with('warning', 'Data Santri berhasil dihapus! (Silahkan cek trash data Santri)');
         }
     }
 
@@ -190,10 +190,10 @@ class SiswaController extends Controller
             $user = User::withTrashed()->where('no_induk', $siswa->no_induk)->first();
             $siswa->restore();
             $user->restore();
-            return redirect()->back()->with('info', 'Data siswa berhasil direstore! (Silahkan cek data siswa)');
+            return redirect()->back()->with('info', 'Data Santri berhasil direstore! (Silahkan cek data Santri)');
         } else {
             $siswa->restore();
-            return redirect()->back()->with('info', 'Data siswa berhasil direstore! (Silahkan cek data siswa)');
+            return redirect()->back()->with('info', 'Data Santri berhasil direstore! (Silahkan cek data Santri)');
         }
     }
 
@@ -205,10 +205,10 @@ class SiswaController extends Controller
             $user = User::withTrashed()->where('no_induk', $siswa->no_induk)->first();
             $siswa->forceDelete();
             $user->forceDelete();
-            return redirect()->back()->with('success', 'Data siswa berhasil dihapus secara permanent');
+            return redirect()->back()->with('success', 'Data Santri berhasil dihapus secara permanent');
         } else {
             $siswa->forceDelete();
-            return redirect()->back()->with('success', 'Data siswa berhasil dihapus secara permanent');
+            return redirect()->back()->with('success', 'Data Santri berhasil dihapus secara permanent');
         }
     }
 
@@ -286,7 +286,7 @@ class SiswaController extends Controller
         $nama_file = rand() . $file->getClientOriginalName();
         $file->move('file_siswa', $nama_file);
         Excel::import(new SiswaImport, public_path('/file_siswa/' . $nama_file));
-        return redirect()->back()->with('success', 'Data Siswa Berhasil Diimport!');
+        return redirect()->back()->with('success', 'Data Santri Berhasil Diimport!');
     }
 
     public function deleteAll()
@@ -295,9 +295,9 @@ class SiswaController extends Controller
         if ($siswa->count() >= 1) {
             Siswa::whereNotNull('id')->delete();
             Siswa::withTrashed()->whereNotNull('id')->forceDelete();
-            return redirect()->back()->with('success', 'Data table siswa berhasil dihapus!');
+            return redirect()->back()->with('success', 'Data table Santri berhasil dihapus!');
         } else {
-            return redirect()->back()->with('warning', 'Data table siswa kosong!');
+            return redirect()->back()->with('warning', 'Data table Santri kosong!');
         }
     }
 }

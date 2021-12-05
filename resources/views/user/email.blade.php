@@ -33,7 +33,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-primary" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          <button name="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
+          <button name="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Update</button>
         </div>
       </form>
     </div>

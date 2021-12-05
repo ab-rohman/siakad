@@ -12,9 +12,9 @@
                     <i class="nav-icon fas fa-folder-plus"></i> &nbsp; Tambah Data Santri
                 </button>
                 <a href="{{ route('siswa.export_excel') }}" class="btn btn-success btn-sm my-3" target="_blank"><i class="nav-icon fas fa-file-export"></i> &nbsp; EXPORT EXCEL</a>
-                {{--  <button type="button" class="btn btn-teal btn-sm" data-toggle="modal" data-target="#importExcel">
+                <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#importExcel">
                     <i class="nav-icon fas fa-file-import"></i> &nbsp; IMPORT EXCEL
-                </button>  --}}
+                </button>
                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dropTable">
                     <i class="nav-icon fas fa-minus-circle"></i> &nbsp; Drop
                 </button>
@@ -49,7 +49,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-teal">Import</button>
+							<button type="submit" class="btn btn-primary">Import</button>
 						</div>
 					</div>
 				</form>
@@ -173,7 +173,7 @@
           </div>
           <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-primary" data-dismiss="modal"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</button>
-              <button type="submit" class="btn btn-teal"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
+              <button type="submit" class="btn btn-primary"><i class="nav-icon fas fa-save"></i> &nbsp; Tambahkan</button>
           </form>
       </div>
       </div>

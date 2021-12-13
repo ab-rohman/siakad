@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    @if (Auth::user()->role == 'Guru')
+                    @if (Auth::user()->role == 'Ustadz')
                         <input type="hidden" name="role" value="{{ Auth::user()->role }}">
                         <img src="{{ asset(Auth::user()->guru(Auth::user()->id_card)->foto) }}" class="img img-responsive" alt="" width="30%" />
                     @else

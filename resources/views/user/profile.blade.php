@@ -16,7 +16,7 @@
       <form action="{{ route('pengaturan.ubah-profile') }}" method="post">
         @csrf
         <div class="card-body">
-          @if (Auth::user()->role == "Guru")
+          @if (Auth::user()->role == "Ustadz")
             <div class="row">
               <input type="hidden" name="role" value="{{ Auth::user()->guru(Auth::user()->id_card)->role }}">
               <div class="col-md-6">
@@ -81,7 +81,7 @@
                   </div>
               </div>
             </div>
-          @elseif (Auth::user()->role == "Siswa")
+          @elseif (Auth::user()->role == "Santri")
             <div class="row" name="role" value="{{ Auth::user()->siswa(Auth::user()->no_induk)->role }}">
               <input type="hidden">
               <div class="col-md-6">

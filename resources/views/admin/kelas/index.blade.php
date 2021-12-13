@@ -252,7 +252,7 @@
         type:"GET",
         data:"id="+parent,
         dataType:"JSON",
-        url:"{{ url('/siswa/view/json') }}",
+        url:"{{ url('/santri/view/json') }}",
         success:function(result){
           // console.log(result);
           var siswa = "";

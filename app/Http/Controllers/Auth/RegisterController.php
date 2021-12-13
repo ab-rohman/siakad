@@ -51,7 +51,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        if ($data['role'] == 'Guru') {
+        if ($data['role'] == 'Ustadz') {
             $guru = Guru::where('id_card', $data['nomer'])->count();
             if ($guru >= 1) {
                 $user = User::where('id_card', $data['nomer'])->count();
@@ -80,7 +80,7 @@ class RegisterController extends Controller
                     'id_card' => ['required'],
                 ]);
             }
-        } elseif ($data['role'] == 'Siswa') {
+        } elseif ($data['role'] == 'Santri') {
             $siswa = Siswa::where('no_induk', $data['nomer'])->count();
             if ($siswa >= 1) {
                 $user = User::where('no_induk', $data['nomer'])->count();
@@ -127,7 +127,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if ($data['role'] == 'Guru') {
+        if ($data['role'] == 'Ustadz') {
             $guruId = Guru::where('id_card', $data['nomer'])->get();
             foreach ($guruId as $val) {
                 $guru = Guru::findorfail($val->id);

@@ -15,11 +15,19 @@ class SiswaImport implements ToModel
      */
     public function model(array $row)
     {
+        if ($row[3] != 'KELAS1') {
+            $row[3] = 'KELAS1';
+        }
+        if ($row[2] == 'Laki-laki') {
+            $row[2] = 'L';
+        }else{
+            $row[2] = 'P';
+        }
         $kelas = Kelas::where('nama_kelas', $row[3])->first();
         if ($row[2] == 'L') {
-            $foto = 'uploads/siswa/52471919042020_male.jpg';
+            $foto = 'uploads/siswa/fotocwok.jpg';
         } else {
-            $foto = 'uploads/siswa/50271431012020_female.jpg';
+            $foto = 'uploads/siswa/fotocwek.png';
         }
 
         return new Siswa([

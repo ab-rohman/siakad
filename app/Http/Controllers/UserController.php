@@ -50,7 +50,7 @@ class UserController extends Controller
             'role' => 'required',
         ]);
 
-        if ($request->role == 'Guru') {
+        if ($request->role == 'Ustadz') {
             $countGuru = Guru::where('id_card', $request->nomer)->count();
             $guruId = Guru::where('id_card', $request->nomer)->get();
             foreach ($guruId as $val) {
@@ -68,7 +68,7 @@ class UserController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Maaf User ini tidak terdaftar sebagai Ustadz!');
             }
-        } elseif ($request->role == 'Siswa') {
+        } elseif ($request->role == 'Santri') {
             $countSiswa = Siswa::where('no_induk', $request->nomer)->count();
             $siswaId = Siswa::where('no_induk', $request->nomer)->get();
             foreach ($siswaId as $val) {
@@ -106,7 +106,7 @@ class UserController extends Controller
     public function show($id)
     {
         $id = Crypt::decrypt($id);
-        if ($id == "Admin" && Auth::user()->role == "Operator") {
+        if ($id == "Admin" && Auth::user()->role == "Pengurus") {
             return redirect()->back()->with('warning', 'Maaf halaman ini hanya bisa di akses oleh Admin!');
         } else {
             $user = User::where('role', $id)->get();
@@ -154,7 +154,7 @@ class UserController extends Controller
             } else {
                 return redirect()->back()->with('error', 'Maaf user ini bukan milik anda!');
             }
-        } elseif ($user->role == 'Operator') {
+        } elseif ($user->role == 'Pengurus') {
             if ($user->id == Auth::user()->id || Auth::user()->role == 'Admin') {
                 $user->delete();
                 return redirect()->back()->with('warning', 'Data user berhasil dihapus! (Silahkan cek trash data user)');
@@ -233,7 +233,7 @@ class UserController extends Controller
 
     public function ubah_profile(Request $request)
     {
-        if ($request->role == 'Guru') {
+        if ($request->role == 'Ustadz') {
             $this->validate($request, [
                 'nama_guru' => 'required',
                 'mapel_id' => 'required',
@@ -259,7 +259,7 @@ class UserController extends Controller
             ];
             $guru->update($guru_data);
             return redirect()->route('profile')->with('success', 'Profile anda berhasil diperbarui!');
-        } elseif ($request->role == 'Siswa') {
+        } elseif ($request->role == 'Santri') {
             $this->validate($request, [
                 'nama_siswa' => 'required',
                 'jk' => 'required',
@@ -297,7 +297,7 @@ class UserController extends Controller
 
     public function edit_foto()
     {
-        if (Auth::user()->role == 'Guru' || Auth::user()->role == 'Siswa') {
+        if (Auth::user()->role == 'Ustadz' || Auth::user()->role == 'Santri') {
             return view('user.foto');
         } else {
             return redirect()->back()->with('error', 'Not Found 404!');
@@ -306,7 +306,7 @@ class UserController extends Controller
 
     public function ubah_foto(Request $request)
     {
-        if ($request->role == 'Guru') {
+        if ($request->role == 'Ustadz') {
             $this->validate($request, [
                 'foto' => 'required'
             ]);

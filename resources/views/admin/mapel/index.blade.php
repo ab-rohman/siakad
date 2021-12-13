@@ -19,9 +19,9 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Mapel</th>
-                    <th>Paket</th>
-                    <th>Kelompok</th>
+                    <th>Nama Pelajaran</th>
+                    <th>Jenis Ilmu</th>
+                    {{--  <th>Kelompok</th>  --}}
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -35,7 +35,7 @@
                     @else
                       <td>{{ $data->paket->ket }}</td>
                     @endif
-                    <td>{{ $data->kelompok }}</td>
+                    {{--  <td>{{ $data->kelompok }}</td>  --}}
                     <td>
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf
@@ -75,9 +75,9 @@
                   <input type="text" id="nama_mapel" name="nama_mapel" class="form-control @error('nama_mapel') is-invalid @enderror" placeholder="{{ __('Nama Mata Pelajaran') }}">
                 </div>
                 <div class="form-group">
-                  <label for="paket_id">Paket</label>
+                  <label for="paket_id">Jenis Ilmu</label>
                   <select id="paket_id" name="paket_id" class="form-control @error('paket_id') is-invalid @enderror select2bs4">
-                    <option value="">-- Pilih Paket Mapel --</option>
+                    <option value="">-- Pilih Jenis Ilmu --</option>
                     <option value="9">Semua</option>
                     @foreach ($paket as $data)
                       <option value="{{ $data->id }}">{{ $data->ket }}</option>
@@ -85,12 +85,12 @@
                   </select>
                 </div>
                 <div class="form-group">
-                    <label for="kelompok">Kelompok</label>
+                    <label for="kelompok">Kelompok Santri</label>
                     <select id="kelompok" name="kelompok" class="select2bs4 form-control @error('kelompok') is-invalid @enderror">
-                      <option value="">-- Pilih Kelompok Mapel --</option>
-                      <option value="A">Pelajaran Fikih</option>
-                      <option value="B">Pelajaran Akhlak</option>
-                      <option value="C">Pelajaran Nahwu Shorof</option>
+                      <option value="">-- Jenis Santri --</option>
+                      <option value="A">Pelajaran hufadz</option>
+                      <option value="B">Pelajaran diniyah</option>
+                      <option value="C">Pelajaran Umum</option>
                     </select>
                 </div>
               </div>

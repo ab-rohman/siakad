@@ -144,9 +144,9 @@
                         <input type="text" id="nip" name="nip" onkeypress="return inputAngka(event)" class="form-control @error('nip') is-invalid @enderror">
                     </div>
                     <div class="form-group">
-                        <label for="mapel_id">Mapel</label>
+                        <label for="mapel_id">Pelajaran</label>
                         <select id="mapel_id" name="mapel_id" class="select2bs4 form-control @error('mapel_id') is-invalid @enderror">
-                            <option value="">-- Pilih Mapel --</option>
+                            <option value="">-- Pelajaran --</option>
                             @foreach ($mapel as $data)
                                 <option value="{{ $data->id }}">{{ $data->nama_mapel }}</option>
                             @endforeach

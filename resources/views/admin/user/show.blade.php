@@ -24,9 +24,9 @@
                 <th>Username</th>
                 <th>Email</th>
                 @foreach ($role as $d => $data)
-                  @if ($d == 'Guru')
+                  @if ($d == 'Ustadz')
                     <th>No Id Card</th>
-                  @elseif ($d == 'Siswa')
+                  @elseif ($d == 'Santri')
                     <th>No Induk Santri</th>
                   @else
                       
@@ -43,9 +43,9 @@
                 <td>{{ $loop->iteration }}</td>
                 <td class="text-capitalize">{{ $data->name }}</td>
                 <td>{{ $data->email }}</td>
-                @if ($data->role == 'Siswa')
+                @if ($data->role == 'Santri')
                   <td>{{ $data->no_induk }}</td>
-                @elseif ($data->role == 'Guru')
+                @elseif ($data->role == 'Ustadz')
                   <td>{{ $data->id_card }}</td>
                 @else
                 @endif

@@ -21,7 +21,7 @@
                     <th>No.</th>
                     <th>Nama Pelajaran</th>
                     <th>Jenis Ilmu</th>
-                    {{--  <th>Kelompok</th>  --}}
+
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -35,7 +35,7 @@
                     @else
                       <td>{{ $data->paket->ket }}</td>
                     @endif
-                    {{--  <td>{{ $data->kelompok }}</td>  --}}
+
                     <td>
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf

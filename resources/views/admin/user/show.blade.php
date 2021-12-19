@@ -32,7 +32,7 @@
                       
                   @endif
                 @endforeach
-                {{-- <th>Tanggal Register</th> --}}
+
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -49,7 +49,7 @@
                   <td>{{ $data->id_card }}</td>
                 @else
                 @endif
-                {{-- <td>{{ $data->created_at->format('l, d F Y') }}</td> --}}
+
                 <td>
                   <form action="{{ route('user.destroy', $data->id) }}" method="post">
                     @csrf

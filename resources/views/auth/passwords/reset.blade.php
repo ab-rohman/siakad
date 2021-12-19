@@ -8,8 +8,6 @@
     @csrf
     @method('patch')
 
-    {{-- <input type="hidden" name="token" value="{{ $token }}"> --}}
-    
     <div class="input-group mb-3">
       <input type="email" class="form-control" value="{{ $user->email }}" disabled>
       <div class="input-group-append" style="background-color: #E9ECEF">
